@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<title>CrudGestores</title>
+</head>
+<body>
+	<div align="center">
+		<nav class="navbar navbar-expand-sm"
+			style="background-color: #023e87;">
+			<div class="container">
+				<a class="btn btn-primary" href="/"
+					style="color: white; background-color: rgb(147, 21, 21);"><img style="width: 41px; height:24px;" alt="" src="https://imgsapp2.correiobraziliense.com.br/portlet/659/64877/20190923093250198563a.png"></a>
+			</div>
+		</nav>
+		<h1 class="jumbotron">CRUD GESTORES</h1>
+		<div class="card text-center" style="width: 55rem;">
+		<a class="btn btn-primary" href="/new">CRIAR GESTOR</a>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nome</th>
+						<th>Matrícula</th>
+						<th>Nascimento</th>
+						<th>Setor</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="gestor : ${listGestores}">
+						<td th:text="${gestor.id}">ID</td>
+						<td th:text="${gestor.nome}">Nome</td>
+						<td th:text="${gestor.matricula}">Matricula</td>
+						<td th:text="${gestor.nascimento}">Nascimento</td>
+						<td th:text="${gestor.setor}">Setor</td>
+						<td><a class="btn btn-warning" href="#" role="button"
+							th:href="@{'/edit/' + ${gestor.id}}">Editar</a>
+							&nbsp;&nbsp;&nbsp; <a class="btn btn-danger" href="#"
+							role="button" th:href="@{'/delete/' + ${gestor.id}}">Deletar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</body>
+</html>
