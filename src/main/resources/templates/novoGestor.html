@@ -15,7 +15,7 @@
 			style="background-color: #023e87;">
 			<div class="container">
 				<a class="btn btn-primary" href="/"
-					style="color: white; background-color: rgb(147, 21, 21);"><img style="width: 41px; height:24px;" alt="" src="https://imgsapp2.correiobraziliense.com.br/portlet/659/64877/20190923093250198563a.png"></a>
+					style="color: white; background-color: rgb(147, 21, 21);">Home</a>
 			</div>
 		</nav>
 		<h1 style="text-align: center;">ADICIONAR NOVO GESTOR</h1>
@@ -34,21 +34,21 @@
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Matrícula:</label>
 					<div class="col-sm-10">
-						<input type="text" placeholder="Informe a matrícula" class="form-control" th:field="*{matricula}"/>
+						<input type="text" placeholder="Informe a matrícula" class="form-control" th:field="*{matricula}" required/>
 					</div>
 				</div>
 				
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Nascimento:</label>
 					<div class="col-sm-10">
-						<input type="date" class="form-control" th:field="*{nascimento}"/>
+						<input type="date" class="form-control" th:field="*{nascimento}" required/>
 					</div>
 				</div>
 				
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Setor:</label>
 					<div class="col-sm-10">
-						<input type="text" placeholder="Informe o setor" class="form-control" th:field="*{setor}"/>
+						<input type="text" placeholder="Informe o setor" class="form-control" th:field="*{setor}" required/>
 					</div>
 				</div>
 				
