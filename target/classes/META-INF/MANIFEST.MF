@@ -1,6 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: gestores
+Implementation-Title: crud-gestores-backend
 Implementation-Version: 0.0.1-SNAPSHOT
-Build-Jdk-Spec: 1.8
+Built-By: vinicius-rocha
+Implementation-Vendor-Id: crud-gestores-backend
+Build-Jdk: 1.8.0_232
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/crud-gestores-backend
 Created-By: Maven Integration for Eclipse
 
