@@ -11,50 +11,56 @@
 <title>Criar Novo Gestor</title>
 </head>
 <body>
-		<nav class="navbar navbar-expand-sm"
-			style="background-color: #023e87;">
-			<div class="container">
-				<a class="btn btn-primary" href="/"
-					style="color: white; background-color: rgb(147, 21, 21);">Home</a>
-			</div>
-		</nav>
-		<h1 style="text-align: center;">ADICIONAR NOVO GESTOR</h1>
-		<br />
-		<div class="mx-auto" style="width: 800px;">
+	<nav class="navbar navbar-expand-sm" style="background-color: #023e87;">
+		<div class="container">
+			<a class="btn btn-primary" href="/"
+				style="color: white; background-color: rgb(147, 21, 21);">Home</a>
+		</div>
+	</nav>
+	<h1 style="text-align: center;">ADICIONAR NOVO GESTOR</h1>
+	<br />
+	<div class="mx-auto" style="width: 800px;">
 		<form action="#" th:action="@{/save}" th:object="${gestor}"
 			method="post">
-			
+
 			<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Nome Gestor:</label>
-					<div class="col-sm-10">
-						<input type="text" placeholder="Informe o nome" class="form-control" autofocus th:field="*{nome}" required/>
-					</div>
+				<label class="col-sm-2 col-form-label">Nome Gestor:</label>
+				<div class="col-sm-10">
+					<input type="text" placeholder="Informe o nome"
+						class="form-control" autofocus th:field="*{nome}" required />
 				</div>
-				
-				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Matrícula:</label>
-					<div class="col-sm-10">
-						<input type="text" placeholder="Informe a matrícula" class="form-control" th:field="*{matricula}" required/>
-					</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Matrícula:</label>
+				<div class="col-sm-10">
+					<input type="text" placeholder="Informe a matrícula"
+						class="form-control" th:field="*{matricula}" required />
 				</div>
-				
-				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Nascimento:</label>
-					<div class="col-sm-10">
-						<input type="date" class="form-control" th:field="*{nascimento}" required/>
-					</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Nascimento:</label>
+				<div class="col-sm-10">
+					<input type="date" class="form-control" th:field="*{nascimento}"
+						required />
 				</div>
-				
-				<div class="form-group row">
-					<label class="col-sm-2 col-form-label">Setor:</label>
-					<div class="col-sm-10">
-						<input type="text" placeholder="Informe o setor" class="form-control" th:field="*{setor}" required/>
-					</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Setor:</label>
+				<div class="col-sm-10">
+					<select class="form-control" th:field="*{setor}">
+						<option th:value="'A'" th:text="Administrativo"></option>
+						<option th:value="'T'" th:text="Tecnologia"></option>
+						<option th:value="'R'" th:text="'Recursos humanos'"></option>
+						<option th:value="'H'" th:text="'Help desk'"></option>
+					</select>
 				</div>
-				
-				<div style="text-align: center;">
-					<button class="btn btn-success" type="submit">ADICIONAR</button>
-				</div>
+			</div>
+			<div style="text-align: center;">
+				<button class="btn btn-success" type="submit">ADICIONAR</button>
+			</div>
 		</form>
 	</div>
 </body>

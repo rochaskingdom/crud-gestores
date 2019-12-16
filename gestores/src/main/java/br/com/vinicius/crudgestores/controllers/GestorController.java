@@ -42,20 +42,20 @@ public class GestorController {
 
 		return "redirect:/";
 	}
-	
+
 	@RequestMapping("/edit/{id}")
 	public ModelAndView editGestor(@PathVariable(name = "id") int id) {
 		ModelAndView mav = new ModelAndView("editarGestor");
 		Gestor gestor = service.get(id);
 		mav.addObject("gestor", gestor);
-		
+
 		return mav;
 	}
-	
+
 	@RequestMapping("/delete/{id}")
 	public String deleteGestor(@PathVariable(name = "id") int id) {
 		service.delete(id);
-		
+
 		return "redirect:/";
 	}
 }

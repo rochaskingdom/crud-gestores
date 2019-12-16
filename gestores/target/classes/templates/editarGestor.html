@@ -36,14 +36,16 @@
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Nome Gestor:</label>
 					<div class="col-sm-10">
-						<input type="text" placeholder="Informe o nome" class="form-control" autofocus th:field="*{nome}" />
+						<input type="text" placeholder="Informe o nome"
+							class="form-control" autofocus th:field="*{nome}" />
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Matrícula:</label>
 					<div class="col-sm-10">
-						<input type="text" placeholder="Informe a matrícula" class="form-control" th:field="*{matricula}" />
+						<input type="text" placeholder="Informe a matrícula"
+							class="form-control" th:field="*{matricula}" />
 					</div>
 				</div>
 
@@ -57,7 +59,12 @@
 				<div class="form-group row">
 					<label class="col-sm-2 col-form-label">Setor:</label>
 					<div class="col-sm-10">
-						<input type="text" placeholder="Informe o setor" class="form-control" th:field="*{setor}" />
+						<select class="form-control" th:field="*{setor}">
+							<option th:value="'A'" th:text="Administrativo"></option>
+							<option th:value="'T'" th:text="Tecnologia"></option>
+							<option th:value="'R'" th:text="'Recursos humanos'"></option>
+							<option th:value="'H'" th:text="'Help desk'"></option>
+						</select>
 					</div>
 				</div>
 
